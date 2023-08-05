@@ -89,7 +89,7 @@ header h1 {
 
 #top {
     height: 750px;
-    padding: 150px 0 150px 0;
+    padding: 120px 0 150px 0;
     background-image:url(images/back.jpg);
     background-size: cover;
 }
@@ -161,28 +161,80 @@ h1 span:nth-child(12) {
 @keyframes fadeInTitle {
     0% {
         opacity: 0;
+        transform: translateY(30px);
     }
     100% {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
 /**topの画像たち**/
 
-#over-img {
+#over-contents {
     display: flex;
+}
+
+.over-img {
+    width: 33%;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInTitle 0.5s 2.0s forwards;
 }
 
 .onnpu img {
     width: 70px;
 }
 
+#onnpu1 {
+    padding-top: 150px;
+}
+
+#onnpu1 img {
+    animation: upDownOnnpu 2.5s 2.5s  infinite forwards alternate;
+}
+
+#onnpu2 img {
+    animation: upDownOnnpu 2.5s 2.8s  infinite forwards alternate;
+}
+
+@keyframes upDownOnnpu {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+    
+    100% {
+        transform: translateY(0);
+    }
+}
+
 #melody-chan img {
     min-width: 350px;
     width: 30%;
+    animation: upDownMelodychan 2.5s 2.5s  infinite forwards alternate;
+}
+
+@keyframes upDownMelodychan {
+    0% {
+        transform: translateY(0);
+    }
+    
+    100% {
+        transform: translateY(40px);
+    }
+}
+
+#kenban {
+    text-align: center;
+    opacity: 0;
+    animation: fadeInTitle 0.5s 2.5s forwards;
 }
 
 #kenban img {
     min-width: 350px;
-    width: 50%;
+    width: 60%;
 }
+

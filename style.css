@@ -23,14 +23,45 @@ li {
     width: 100%;
     padding: 0 5%;
     margin: 0 auto;
+    text-align: center;
 }
 
 .container h2 {
-    text-align: center;
-    margin-bottom: 50px;
+    display: inline-block;
+    margin: 60px 0 50px 0;
+    padding: 5px;
     font-family: 'Kaisei Opti', serif;
     font-size: 30px;
     color: rgb(51, 52, 52);
+    border-bottom: 8px dotted rgba(196, 119, 119, 0.877);
+}
+
+.container h3 {
+    font-family: 'Kaisei Opti', serif;
+    text-align: left;
+}
+
+.container p {
+    text-align: left;
+}
+
+.area {
+    margin-top: 60px;
+    padding: 8%;
+    background-color: rgba(243, 227, 227, 0.877);
+    border-radius: 30px;
+}
+
+.area h2 {
+    margin-top: 0;
+}
+
+.fade-in {
+    opacity: 0;
+}
+
+.fade-in-active {
+    animation: fadeIn 0.7s forwards;
 }
 
 /*****************header*****************/
@@ -39,7 +70,7 @@ header {
     display: flex;
     align-items: center;
     height: 70px;
-    background-color: rgb(151, 87, 87);
+    background-color: rgb(118, 36, 55);
     color: white;
     font-family: 'Kaisei Opti', serif;
     opacity: 0.7;
@@ -161,7 +192,7 @@ h1 span:nth-child(12) {
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(80px);
     }
     100% {
         opacity: 1;
@@ -238,3 +269,142 @@ h1 span:nth-child(12) {
     width: 50%;
 }
 
+/*****************intro*****************/
+
+#intro {
+    background-color: white;
+}
+
+#intro-contents {
+    margin-bottom: 30px;
+    display: flex;
+}
+
+#intro-img {
+    width: 40%;
+}
+
+#intro-img img {
+    width: 100%;
+    max-height: 350px;
+    border-radius: 4%;
+    margin-right: 80px;
+    border: 1px solid gray;
+}
+
+#intro-text {
+    margin-left: 50px;
+}
+
+#intro-text p {
+    margin-top: 20px;
+}
+
+#intro p:nth-child(1) {
+    margin-top: 10px;
+}
+
+/*****************course*****************/
+
+.course-text {
+    margin-bottom: 40px;
+}
+
+.btn-wrapper {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 10px;
+    background-color:  rgba(196, 119, 119, 0.877);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: rgb(118, 36, 55);
+    color: rgb(207, 207, 207);
+}
+
+button {
+    font-size: 20px;
+}
+
+#home-course-btn {
+    padding: 2% 7%;
+}
+
+/*****************gallery*****************/
+
+#gallery-contents {
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    gap: 60px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.photo img {
+    width: 100%;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.photo img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.photo p {
+    text-align: center;
+}
+
+/*****************問い合わせへ遷移するボタン*****************/
+
+#home-contact-btn {
+    padding: 3% 15%;
+    margin: 30px 0;
+}
+
+button span {
+    font-size: 15px;
+}
+
+/*****************ページの先頭へ戻るリンク****************/
+
+#return {
+    text-align: center;
+    margin: 30px 0;
+}
+
+#return a {
+    color: rgb(109, 107, 107);
+    transition: all 0.3s;
+}
+
+#return a:hover {
+    color: rgba(196, 119, 119, 0.877);
+}
+
+/*****************footer****************/
+
+footer {
+    height: 60px;
+    background-color: rgb(118, 36, 55);
+    opacity: 0.7;
+    color: white;
+    padding: 20px 0;
+
+}
+
+footer .container p {
+    font-size: 15px;
+    text-align: center;
+    margin: 0 auto;
+}

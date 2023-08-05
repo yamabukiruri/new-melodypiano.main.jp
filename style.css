@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;     /*画面内遷移をスムーズスクロールで実施*/
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1366px;
+    width: 100%;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Kaisei Opti', serif;
+    font-size: 30px;
+    color: rgb(51, 52, 52);
+}
+
+/*****************header*****************/
+
+header {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    background-color: rgb(151, 87, 87);
+    color: white;
+    font-family: 'Kaisei Opti', serif;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 25px;
+    margin-left: 5%;
+}
+
+#header-list {
+    margin-right: 5%;
+    margin-left: auto;
+}
+
+#header-list ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#header-list li {
+    margin-left: 30px;
+}
+
+#header-list li a {
+    color: white;
+}
+
+#header-list li a:hover {
+    cursor: pointer;
+    color: rgb(79, 46, 46);
+    transition: 0.3s;
+}
+
+.link-icon {
+    margin-left: 1px;
+    width: 12px;
+}

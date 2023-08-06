@@ -8,6 +8,7 @@ html {
 
 body {
     margin: 0;
+    background-color: white;
 }
 
 a {
@@ -33,7 +34,7 @@ li {
     font-family: 'Kaisei Opti', serif;
     font-size: 30px;
     color: rgb(51, 52, 52);
-    border-bottom: 8px dotted rgba(196, 119, 119, 0.877);
+    border-bottom: 8px dotted #E5B4AE;
 }
 
 .container h3 {
@@ -48,7 +49,6 @@ li {
 .area {
     margin-top: 60px;
     padding: 8%;
-    background-color: rgba(243, 227, 227, 0.877);
     border-radius: 30px;
 }
 
@@ -70,10 +70,9 @@ header {
     display: flex;
     align-items: center;
     height: 70px;
-    background-color: rgb(118, 36, 55);
-    color: white;
+    background-color: #C47779;
     font-family: 'Kaisei Opti', serif;
-    opacity: 0.7;
+    opacity: 0.8;
     position: fixed;
     top: 0;
     width: 100%;
@@ -83,6 +82,7 @@ header {
 header h1 {
     font-size: 25px;
     margin-left: 5%;
+    color: white;
 }
 
 #header-list {
@@ -105,7 +105,7 @@ header h1 {
 
 #header-list li a:hover {
     cursor: pointer;
-    color: rgb(79, 46, 46);
+    color: black;
     transition: 0.3s;
 }
 
@@ -130,6 +130,7 @@ h1 {
     overflow: hidden;
     font-family: 'Kaisei Opti', serif;
     font-size: 45px;
+    color: #38342e;
 }
 
 h1 span:nth-child(1) {
@@ -271,12 +272,7 @@ h1 span:nth-child(12) {
 
 /*****************intro*****************/
 
-#intro {
-    background-color: white;
-}
-
 #intro-contents {
-    margin-bottom: 30px;
     display: flex;
 }
 
@@ -305,6 +301,9 @@ h1 span:nth-child(12) {
 }
 
 /*****************course*****************/
+#course .area {
+    background-color: #fff8eb;
+}
 
 .course-text {
     margin-bottom: 40px;
@@ -317,7 +316,6 @@ h1 span:nth-child(12) {
 .btn {
     display: inline-block;
     margin-bottom: 10px;
-    background-color:  rgba(196, 119, 119, 0.877);
     color: white;
     font-weight: bold;
     border: none;
@@ -328,19 +326,32 @@ h1 span:nth-child(12) {
 .btn:hover {
     cursor: pointer;
     transform: scale(1.1);
-    background-color: rgb(118, 36, 55);
     color: rgb(207, 207, 207);
-}
-
-button {
-    font-size: 20px;
 }
 
 #home-course-btn {
     padding: 2% 7%;
+    font-size: 20px;
+    background-color: #E5B4AE;
+}
+
+#home-course-btn:hover {
+    background-color: #845254;
 }
 
 /*****************gallery*****************/
+
+#gallery {
+    background-color: #A8C6CA;
+    padding: 60px 0;
+    margin-top: 60px;
+}
+
+#gallery .area {
+    margin-top: 20px;
+    padding: 4%;
+    background-color: white;
+}
 
 #gallery-contents {
     display: grid;
@@ -350,19 +361,84 @@ button {
     justify-content: center;
 }
 
+.photo {
+    position: relative;
+}
+
 .photo img {
     width: 100%;
     border-radius: 10px;
+}
+
+.photo .img-mask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: black;
+    color: white;
+    border-radius: 10px;
+	transition:	all 0.3s;
+}
+
+.photo:nth-child(5) .img-mask{
+    height: 57%;                    /*サイズが小さい写真のため、マスクの高さを調整する*/
+}
+
+.photo:nth-child(6) .img-mask{
+    height: 70%;                    /*サイズが小さい写真のため、マスクの高さを調整する*/
+}
+
+.photo:hover .img-mask {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.img-mask p {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/*****************link*****************/
+
+#link {
+    background-color: rgba(241, 241, 241, 0.877);
+    margin-bottom: 40px;
+    height: 450px;
+}
+
+#link-contents {
+    display: flex;
+    justify-content: space-around;
+}
+
+.circle-btn-wrapper {
+    width: 25%;
+}
+
+.circle-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    font-size: 18px;
+    font-family: 'Kaisei Opti', serif;
+    background-color: #ffe987;
+    color: black;
+    border-radius: 50%;
     transition: all 0.3s;
 }
 
-.photo img:hover {
-    cursor: pointer;
+.circle-btn:hover {
+    background-color: #b3a462;
+    color: white;
     transform: scale(1.05);
-}
-
-.photo p {
-    text-align: center;
 }
 
 /*****************問い合わせへ遷移するボタン*****************/
@@ -370,9 +446,15 @@ button {
 #home-contact-btn {
     padding: 3% 15%;
     margin: 30px 0;
+    font-size: 25px;
+    background-color: #E5B4AE;
 }
 
-button span {
+#home-contact-btn:hover {
+    background-color: #845254;
+}
+
+#home-contact-btn span {
     font-size: 15px;
 }
 
@@ -396,8 +478,8 @@ button span {
 
 footer {
     height: 60px;
-    background-color: rgb(118, 36, 55);
-    opacity: 0.7;
+    background-color: #C47779;
+    opacity: 0.8;
     color: white;
     padding: 20px 0;
 

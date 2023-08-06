@@ -278,18 +278,14 @@ h1 span:nth-child(12) {
 
 #intro-img {
     width: 40%;
+    margin-right: 50px;
 }
 
 #intro-img img {
     width: 100%;
     max-height: 350px;
     border-radius: 4%;
-    margin-right: 80px;
     border: 1px solid gray;
-}
-
-#intro-text {
-    margin-left: 50px;
 }
 
 #intro-text p {
@@ -302,7 +298,11 @@ h1 span:nth-child(12) {
 
 /*****************course*****************/
 #course .area {
-    background-color: #fff8eb;
+    background-color: #fae8e8;;
+}
+
+#course h2 {
+    border-bottom: 8px dotted #cea39e;
 }
 
 .course-text {
@@ -332,7 +332,7 @@ h1 span:nth-child(12) {
 #home-course-btn {
     padding: 2% 7%;
     font-size: 20px;
-    background-color: #E5B4AE;
+    background-color: #cea39e;
 }
 
 #home-course-btn:hover {
@@ -343,13 +343,17 @@ h1 span:nth-child(12) {
 
 #gallery {
     background-color: #A8C6CA;
-    padding: 60px 0;
+    padding: 60px 20px;
     margin-top: 60px;
+}
+
+#gallery h2 {
+    border-bottom: 8px dotted #91afb3;
 }
 
 #gallery .area {
     margin-top: 20px;
-    padding: 4%;
+    padding: 4% 0;
     background-color: white;
 }
 
@@ -412,6 +416,10 @@ h1 span:nth-child(12) {
     height: 450px;
 }
 
+#link h2 {
+    border-bottom: 8px dotted rgba(212, 210, 155, 0.877);
+}
+
 #link-contents {
     display: flex;
     justify-content: space-around;
@@ -429,14 +437,14 @@ h1 span:nth-child(12) {
     height: 180px;
     font-size: 18px;
     font-family: 'Kaisei Opti', serif;
-    background-color: #ffe987;
+    background-color: rgba(218, 217, 201, 0.877);
     color: black;
     border-radius: 50%;
     transition: all 0.3s;
 }
 
 .circle-btn:hover {
-    background-color: #b3a462;
+    background-color: rgba(147, 147, 138, 0.877);
     color: white;
     transform: scale(1.05);
 }
@@ -489,4 +497,72 @@ footer .container p {
     font-size: 15px;
     text-align: center;
     margin: 0 auto;
+}
+
+/*****************プロフィール****************/
+
+/*****************teacher****************/
+
+#teacher h2 {
+    margin-top: 120px;
+}
+
+#teacher-contents {
+    display: flex;
+    align-items: center;
+    background-color: rgba(241, 241, 241, 0.877);
+    border-radius: 10px;
+    padding: 40px;
+    animation: fadeIn 0.7s forwards;
+}
+
+#teacher-img {
+    width: 40%;
+    margin-right: 50px;
+}
+
+#teacher-img img {
+    width: 100%;
+    border-radius: 4%;
+    border: 1px solid gray;
+}
+
+#teacher-text ul {
+    text-align: left;
+    padding-left: 0;
+}
+
+/*****************message****************/
+
+#message-contents {
+    display: flex;
+}
+
+#message-img {
+    width: 30%;
+    margin-left: 50px;
+}
+
+#message-img img {
+    width: 100%;
+    border-radius: 4%;
+    border: 1px solid gray;
+}
+
+.balloon {
+    position: relative;
+    margin-left: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #e2eced;
+}
+
+.balloon::before {
+    position: absolute;
+    right: -15px;
+    width: 15px;
+    height: 30px;
+    background-color: #e2eced;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    content: '';
 }

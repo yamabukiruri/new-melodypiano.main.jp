@@ -40,6 +40,12 @@ li {
 .container h3 {
     font-family: 'Kaisei Opti', serif;
     text-align: left;
+    font-size: 23px;
+}
+
+.container h4{
+    font-family: 'Kaisei Opti', serif;
+    text-align: left;
 }
 
 .container p {
@@ -62,6 +68,10 @@ li {
 
 .fade-in-active {
     animation: fadeIn 0.7s forwards;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 /*****************header*****************/
@@ -499,7 +509,121 @@ footer .container p {
     margin: 0 auto;
 }
 
-/*****************プロフィール****************/
+/*****************教室概要****************/
+
+/*****************lesson****************/
+
+#lesson h2 {
+    margin-top: 120px;
+}
+
+#lesson-contents {
+    background-color: rgba(241, 241, 241, 0.877);
+    border-radius: 10px;
+    padding: 2% 4% 4% 4%;
+    animation: fadeIn 0.7s forwards;
+}
+
+/*****************subject(レッスン科目)****************/
+
+#subject h4 {
+    padding: 3px 0 3px 5px;
+    background-color: #A8C6CA;
+    border-radius: 5px; 
+    font-size: 17px;
+}
+
+#subject p {
+    margin: 0 1%;
+}
+
+/*****************price(レッスン料金)****************/
+
+#price h4 {
+    margin-top: 40px;
+    padding: 3px 0 3px 5px;
+    background-color: rgba(202, 201, 187, 0.877);
+    border-radius: 5px; 
+    font-size: 17px;
+}
+
+#price .price-text {
+    margin: 0 1% 3% 1%;
+}
+
+#price table {
+    border-collapse: collapse;
+    border: 0.5px solid gray;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#price th {
+    padding: 0.5%;
+    background-color: #c2cad2;
+    border: 2px double gray;
+}
+
+#price th:first-child {
+    width: 20%;
+}
+
+#price td {
+    padding: 2%;
+    border: 0.5px solid gray;
+    text-align: center;
+}
+
+#price .comment {
+    text-align: right;
+    margin-top: 3%;
+}
+
+/*****************concert(発表会)****************/
+
+#concert-contents {
+    display: flex;
+}
+
+#concert-img {
+    width: 50%;
+    margin-right: 40px;
+}
+
+#concert-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/*****************competition(コンクール)****************/
+
+#competition-contents {
+    display: flex;
+}
+
+#competition-img {
+    width: 50%;
+    margin-right: 40px;
+}
+
+#competition-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/*****************access****************/
+
+#access-contents {
+    background-color: rgba(241, 241, 241, 0.877);
+    border-radius: 10px;
+    padding: 2% 4% 4% 4%;
+}
+
+iframe {
+    width: 100%;
+}
+
+/*****************講師紹介****************/
 
 /*****************teacher****************/
 
@@ -512,7 +636,7 @@ footer .container p {
     align-items: center;
     background-color: rgba(241, 241, 241, 0.877);
     border-radius: 10px;
-    padding: 40px;
+    padding: 4%;
     animation: fadeIn 0.7s forwards;
 }
 
@@ -552,7 +676,8 @@ footer .container p {
 .balloon {
     position: relative;
     margin-left: 15px;
-    padding: 20px;
+    margin-bottom: 10px;             /*voice.htmlの吹き出し部分を整えるためのmargin-bottom*/
+    padding: 2%;
     border-radius: 10px;
     background-color: #e2eced;
 }
@@ -565,4 +690,48 @@ footer .container p {
     background-color: #e2eced;
     clip-path: polygon(0 0, 100% 50%, 0 100%);
     content: '';
+}
+
+/*****************生徒さんの声****************/
+
+/*****************2022****************/
+
+#concert2022 h2 {
+    margin-top: 120px;
+}
+
+#concert2022 .balloon::before {
+    left: -15px;
+    background-color: #e2eced;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    transform: scaleX(-1);
+}
+
+#concert2022 .balloon:nth-child(1) {
+    animation: fadeIn 0.7s forwards;
+}
+
+#concert2022 .balloon:nth-child(even) {
+    background-color: #bad0d2;
+}
+
+#concert2022 .balloon:nth-child(even)::before {
+    background-color: #bad0d2;
+}
+
+/*****************2021****************/
+
+#concert2021 .balloon::before {
+    left: -15px;
+    background-color: #e2eced;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    transform: scaleX(-1);
+}
+
+#concert2021 .balloon:nth-child(even) {
+    background-color: #bad0d2;
+}
+
+#concert2021 .balloon:nth-child(even)::before {
+    background-color: #bad0d2;
 }

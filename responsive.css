@@ -191,6 +191,10 @@
         display: none;
     }
 
+    #message .balloon {
+        margin-left: 0;
+    }
+
     #message .balloon:before {
         display: none;
     }

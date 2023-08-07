@@ -1,7 +1,124 @@
 @media (max-width: 1095px) {
-    #header-list ul {
-        
+
+    /*****************ハンバーガーメニュー*****************/
+
+    .open {                                                         /*.openがついたheaderのこと*/
+        background-color: rgba(255, 154, 154, 0.103); 
     }
+
+    .open h1 {
+        color: rgb(158, 158, 158);
+    }
+
+    #header-list {
+        display: block;
+        width: 220px;
+        position: fixed;
+        background-color: #C47779;
+        top: 0;
+        right: -300px;
+        bottom: 0;
+        transition: all 0.5s;
+        opacity: 0;
+    }
+
+    #header-list ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #header-list li {
+        margin: 20% 0 0 0;
+        padding: 10px;
+        width: 80%;
+        border-radius: 10px;
+        transition: all 0.5s;
+    }
+
+    #header-list li:first-child {
+        margin-top: 30%;
+    }
+
+    #header-list li:hover {
+        background-color: #aa686a;
+        color: black;
+    }
+
+    #header-list li a {
+        padding: 15px 15px 15px 0;
+    }
+
+    .open #header-list {
+        right: -5%;           /*.containerのpaddingが5%あるため、rightが0だと5%分隙間ができてしまう*/
+        opacity: 1;
+    }
+    
+    #toggle-btn {
+        display: block;
+        position: fixed;
+        text-align: right;
+        top: 4px;
+        right: 0px;
+        width: 60px;
+        height: 60px;
+        z-index: 3;
+        cursor: pointer;
+    }
+
+    #toggle-btn span{
+        position: absolute;
+        display: block;
+        right: 15px;
+        width: 30px;
+        height: 2px;
+        background-color: white;
+        transition: all 0.5s;
+        border-radius: 4px;
+        padding: 1.5px;
+    }
+
+    #toggle-btn span:nth-child(1){
+        top: 17px;
+    }
+
+    #toggle-btn span:nth-child(2){
+        top: 29px;   
+    }
+    
+    #toggle-btn span:nth-child(3){
+        bottom: 17px;   
+    }
+
+    .open #toggle-btn {
+        background-color: none;
+    }
+
+    .open #toggle-btn span:nth-child(1) {
+        transform: translate(0, 12px) rotate(-315deg);
+    }
+
+    .open #toggle-btn span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .open #toggle-btn span:nth-child(3) {
+        transform: translate(0, -12px) rotate(315deg);
+    }
+
+    .open #mask {
+        display: block;
+        background-color: #70767a;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        position: fixed;
+        z-index: 1;
+        opacity: 0.9;
+        cursor: pointer;
+    }
+
+    /*****************ハンバーガーメニューここまで*****************/
 
     #teacher-contents {
         flex-direction: column;
@@ -91,6 +208,10 @@
 
     .container h4 {
         font-size: 15px;
+    }
+
+    header h1 {
+        font-size: 20px;
     }
 
     #top h1 {

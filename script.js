@@ -12,3 +12,11 @@ window.addEventListener("scroll", () => {
         }
     }
 });
+
+const toggle = document.querySelector("#toggle-btn");
+const header = document.querySelector("header");
+const hamburger = document.querySelector("#hamburger");
+toggle.addEventListener("click", () => {
+    hamburger.classList.toggle("open");
+    header.classList.toggle("open");
+});

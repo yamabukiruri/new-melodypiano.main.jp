@@ -129,8 +129,7 @@ header h1 {
 /*****************top*****************/
 
 #top {
-    height: 750px;
-    padding: 100px 0 150px 0;
+    padding: 100px 0 80px 0;
     background-image:url(images/back.jpg);
     background-size: cover;
 }
@@ -215,17 +214,18 @@ h1 span:nth-child(12) {
 
 #over-contents {
     display: flex;
+    justify-content: center;
 }
 
 .over-img {
     width: 33%;
-    text-align: center;
     opacity: 0;
+    text-align: center;
     animation: fadeIn 0.5s 2.0s forwards;
 }
 
 .onnpu img {
-    width: 100px;
+    width: 20%;
 }
 
 #onnpu1 {
@@ -254,8 +254,8 @@ h1 span:nth-child(12) {
 }
 
 #melody-chan img {
-    min-width: 350px;
-    width: 30%;
+    min-width: 250px;
+    width: 100%;
     animation: upDownMelodychan 2.5s 2.5s  infinite forwards alternate;
 }
 
@@ -276,8 +276,8 @@ h1 span:nth-child(12) {
 }
 
 #kenban img {
-    min-width: 350px;
-    width: 50%;
+    min-width: 250px;
+    width: 60%;
 }
 
 /*****************intro*****************/
@@ -423,7 +423,7 @@ h1 span:nth-child(12) {
 #link {
     background-color: rgba(241, 241, 241, 0.877);
     margin-bottom: 40px;
-    height: 450px;
+    padding-bottom: 80px;
 }
 
 #link h2 {
@@ -433,18 +433,16 @@ h1 span:nth-child(12) {
 #link-contents {
     display: flex;
     justify-content: space-around;
-}
-
-.circle-btn-wrapper {
-    width: 25%;
+    flex-wrap: wrap;
 }
 
 .circle-btn {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 180px;
-    height: 180px;
+    margin: 20px;
+    width: 200px;
+    height: 200px;
     font-size: 18px;
     font-family: 'Kaisei Opti', serif;
     background-color: rgba(218, 217, 201, 0.877);

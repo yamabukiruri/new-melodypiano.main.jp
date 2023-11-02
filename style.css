@@ -471,10 +471,6 @@ h1 span:nth-child(12) {
     background-color: #845254;
 }
 
-#home-contact-btn span {
-    font-size: 15px;
-}
-
 /*****************ページの先頭へ戻るリンク****************/
 
 #return {
@@ -733,4 +729,62 @@ iframe {
 
 #concert2021 .balloon:nth-child(even)::before {
     background-color: #bad0d2;
+}
+
+/*****************お問い合わせ****************/
+
+/*****************入力画面****************/
+
+#contact-form h2 {
+    margin-top: 120px;
+}
+
+#contact-contents {
+    background-color: rgba(241, 241, 241, 0.877);
+    border-radius: 10px;
+    padding: 2% 4% 4% 4%;
+    animation: fadeIn 0.7s forwards;
+}
+
+#contact-attention {
+    margin: 20px 0;
+    color: #C47779;
+    font-weight: bold;
+}
+
+#contact-attention li {
+    list-style-type: decimal;
+    text-align: left;
+}
+
+form {
+    margin-top: 20px;
+    padding: 4%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: white;
+    text-align: left;
+}
+
+form input {
+    width: 350px;
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+form textarea {
+    width: 100%;
+    height: 200px;
+}
+
+form .btn {
+    width: 250px;
+    height: 60px;
+    margin-top: 50px;
+    font-size: 20px;
+    background-color: #C47779;
+}
+
+form .btn:hover {
+    background-color: #845254;
 }

@@ -55,6 +55,42 @@
             </div>
             <div id="mask"></div>
         </div>
+        <main>
+            <div id="contact-form">
+                <div class="container">
+                    <h2>お問い合わせフォーム</h2>
+                    <div id="contact-contents">
+                        <p>お問い合わせ等がございましたら、下記フォームに入力のうえで、送信してください。<br>
+                            こちらから、ご返信させていただきます。お気軽にお問い合わせください。</p>
+                        <div id="contact-attention">
+                            <p>※「お名前」欄には、保護者のお名前をご記入ください。</p>
+                            <p>※「メッセージ」欄には、以下の項目をご記入ください。</p>
+                            <ol>
+                                <li>名前（レッスンを受けたい方のお名前）</li>
+                                <li>年齢</li>
+                                <li>ピアノ歴（初めて or 〇年）</li>
+                                <li>所有する楽器</li>
+                                <li>おおよその住所（例：鶴見区北寺尾〇丁目）</li>
+                                <li>電話番号(メール連絡ができない場合があるため)</li>
+                                <li>お問い合わせ（質問、体験レッスンのご希望など）</li>
+                            </ol>
+                        </div>
+                        <form action="submit.php" method="post">
+                            <p>お名前</p>
+                            <input type="text" name="name">
+                            <p>メールアドレス</p>
+                            <input type="text" name="mail">
+                            <p>メッセージ</p>
+                            <textarea name="form-message"></textarea>
+                            <div class="btn-wrapper">
+                                <input class="btn" type="submit" value="送信">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
         <footer>
             <div class="container">
                 <p>&copy; メロディー♪ピアノ教室</p>

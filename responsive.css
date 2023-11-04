@@ -260,3 +260,13 @@
     }
 
 }
+
+@media (max-width: 480px) {
+    form input {
+        width: 100%;
+    }
+
+    form .btn {
+        width: 90%;
+    }
+}

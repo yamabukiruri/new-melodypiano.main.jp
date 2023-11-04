@@ -14,11 +14,11 @@
         <meta name="description" content="横浜市鶴見区北寺尾にある【メロディー♪ピアノ教室】のホームページです。横浜市鶴見区北寺尾、馬場、獅子ヶ谷、上の宮、東寺尾、下末吉、鶴見中央、綱島、大倉山、菊名から通っていただいています。4歳のお子さまから大人の方まで、楽しくご指導いたします。">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="google-site-verification" content="2WkNBfTH23C3Ul17k9WwtN7d3XeZivb71UPUlMf5f6o" />
-        <title>メロディー♪ピアノ教室（横浜市鶴見区北寺尾）-お問い合わせ</title>
+        <title>メロディー♪ピアノ教室（横浜市鶴見区北寺尾）-講師紹介</title>
         <!--OGP-->
         <meta property="og:url" content="http://melodypiano.main.jp/profile.html">
         <meta property="og:type" content="website">
-        <meta property="og:title" content="メロディー♪ピアノ教室-お問い合わせ">
+        <meta property="og:title" content="メロディー♪ピアノ教室-講師紹介">
         <meta property="og:description" content="横浜市鶴見区北寺尾にある【メロディー♪ピアノ教室】のホームページです。4歳のお子さまから大人の方まで、楽しくご指導いたします。">
         <meta property="og:image" content="http://melodypiano.main.jp/image/piano.jpg">
         <!--Font Awesome-->
@@ -58,32 +58,23 @@
         <main>
             <div id="contact-form">
                 <div class="container">
-                    <h2>お問い合わせフォーム</h2>
+                    <h2>お問い合わせを受け付けました</h2>
+                    <p id="thank-you">お問い合わせありがとうございます。
+                        数日以内に、講師よりメールでご連絡させていただきます。</p>
                     <div id="contact-contents">
-                        <p>お問い合わせ等がございましたら、下記フォームに入力のうえで、送信してください。<br>
-                            こちらから、ご返信させていただきます。お気軽にお問い合わせください。</p>
-                        <div id="contact-attention">
-                            <p>※「お名前」欄には、保護者のお名前をご記入ください。</p>
-                            <p>※「メッセージ」欄には、以下の項目をご記入ください。</p>
-                            <ol>
-                                <li>名前（レッスンを受けたい方のお名前）</li>
-                                <li>年齢</li>
-                                <li>ピアノ歴（初めて or 〇年）</li>
-                                <li>所有する楽器</li>
-                                <li>おおよその住所（例：鶴見区北寺尾〇丁目）</li>
-                                <li>電話番号(メール連絡ができない場合があるため)</li>
-                                <li>お問い合わせ（質問、体験レッスンのご希望など）</li>
-                            </ol>
-                        </div>
-                        <form action="submit.php" method="post">
+                        <h3>入力内容</h3>
+                        <form>
                             <p>お名前</p>
-                            <input type="text" name="name">
+                            <div class="echo">
+                                <?php echo nl2br($_POST['name']); ?>
+                            </div>
                             <p>メールアドレス</p>
-                            <input type="text" name="mail">
+                            <div class="echo">
+                                <?php echo nl2br($_POST['mail']); ?>
+                            </div>
                             <p>メッセージ</p>
-                            <textarea name="form-message"></textarea>
-                            <div class="btn-wrapper">
-                                <input class="btn" type="submit" value="送信">
+                            <div class="echo">
+                                <?php echo nl2br($_POST['form-message']); ?>
                             </div>
                         </form>
                     </div>

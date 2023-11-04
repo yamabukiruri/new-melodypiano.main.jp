@@ -47,20 +47,37 @@
         <main>
             <div id="contact-form">
                 <div class="container">
-                    <h2>お問い合わせを受け付けました</h2>
-                    <p id="thank-you">お問い合わせありがとうございます。
-                        数日以内に、講師よりメールでご連絡させていただきます。</p>
+                    <h2>確認画面</h2>
+                    <p id="thank-you">内容にお間違いがないか確認し、
+                        送信ボタンを押してください。</p>
+                    <div id="contact-contents">
+                        <h3>入力内容</h3>
+                        <form action="submit.php" method="post">
+                            <p>お名前</p>
+                            <div class="echo">
+                                <?php echo nl2br($_POST['name']); ?>
+                            </div>
+                            <p>メールアドレス</p>
+                            <div class="echo">
+                                <?php echo nl2br($_POST['mail']); ?>
+                            </div>
+                            <p>メッセージ</p>
+                            <div class="echo">
+                                <?php echo nl2br($_POST['form-message']); ?>
+                            </div>
+                            <div class="btn-wrapper">
+                                <input class="btn" type="submit" value="送信">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-
-            <!--ここにメール送信機能を実装したい-->
-
         </main>
-        <!--<footer>
+        <footer>
             <div class="container">
                 <p>&copy; メロディー♪ピアノ教室</p>
             </div>
-        </footer>-->
+        </footer>
 
         <!--JavaScript-->
         <script src="script.js?date=202209192156"></script>

@@ -45,32 +45,64 @@
             <div id="mask"></div>
         </div>
         <main>
-            <div id="contact-form">
-                <div class="container">
-                    <h2>確認画面</h2>
-                    <p id="thank-you">内容にお間違いがないか確認し、
-                        送信ボタンを押してください。</p>
-                    <div id="contact-contents">
-                        <h3>入力内容</h3>
-                        <form action="submit.php" method="post">
-                            <p>お名前</p>
-                            <div class="echo">
-                                <?php echo nl2br($_POST['name']); ?>
-                            </div>
-                            <p>メールアドレス</p>
-                            <div class="echo">
-                                <?php echo nl2br($_POST['mail']); ?>
-                            </div>
-                            <p>メッセージ</p>
-                            <div class="echo">
-                                <?php echo nl2br($_POST['form-message']); ?>
-                            </div>
-                            <div class="btn-wrapper">
-                                <input class="btn" type="submit" value="送信">
-                            </div>
-                        </form>
-                    </div>
-                </div>
+            <?php
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $message = $_POST['form-message'];
+
+            $name = htmlspecialchars($name);
+            $email = htmlspecialchars($email);
+            $message = htmlspecialchars($message);
+
+            echo '<div id="contact-form">'
+                .'<div class="container">'
+                .'<h2>確認画面</h2>'
+                .'<p id="thank-you">内容にお間違いがないか確認し、送信ボタンを押してください。
+                入力ミスが発生している場合は、「戻る」ボタンを押して修正してください。</p>'
+                .'<div id="contact-contents">'
+                .'<h3>入力内容</h3>'
+                .'<form method="post" action="submit.php">';
+
+            $okflg = true; //フラグ制御
+
+            if($name == ''){
+                echo '<p>お名前</p>'.'<span class="error">名前が入力されていません。</span>'.'<br><br>';
+                $okflg = false;
+            }else{
+                echo '<p>お名前</p>'.'<span class="word-break">'.$name.'</span><br><br>';
+            }
+
+            if(preg_match('/^[\w\-\.]+\@[\w\-\.]+\.([a-z]+)$/', $email) == 0){ //メールアドレスに異常があったら
+                echo '<p>メールアドレス</p>'.'<span class="error">メールアドレスを正確に入力してください。</span>'.'<br><br>';
+                $okflg = false;
+            }else{
+                echo '<p>メールアドレス</p>'.'<span class="word-break">'.$email.'</span><br><br>';
+            }
+
+            if($message == ''){
+                echo '<p>メッセージ</p>'.'<span class="error">メッセージが入力されていません。</span>'.'<br><br>';
+                $okflg = false;
+            }else{
+                echo '<p>メッセージ</p>'.'<span class="word-break">'.$message.'</span><br><br>';
+            }
+
+            echo '<div class="btn-wrapper">'
+                .'<input class="btn" type="button" onclick="history.back()" value="戻る">'
+                .'</div>';
+
+            if($okflg == true){
+                echo '<input type="hidden" name="name" value="'.$name.'">'
+                    .'<input type="hidden" name="email" value="'.$email.'">'
+                    .'<input type="hidden" name="message" value="'.$message.'">'
+                    .'<div class="btn-wrapper">'
+                    .'<input class="btn" type="submit" value="送信">'
+                    .'</div>';
+            }
+
+            echo '</form></div></div></div>';
+            ?>
+            <div id="return">
+                <a href="#contact-form">▲このページの先頭へ戻る</a>
             </div>
         </main>
         <footer>

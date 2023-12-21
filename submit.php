@@ -45,15 +45,56 @@
             <div id="mask"></div>
         </div>
         <main>
-            <div id="contact-form">
-                <div class="container">
-                    <h2>お問い合わせを受け付けました</h2>
-                    <p id="thank-you">お問い合わせありがとうございます。
-                        数日以内に、講師よりメールでご連絡させていただきます。</p>
-                </div>
-            </div>
+            <?php
 
-            <!--ここにメール送信機能を実装したい-->
+            try {
+
+                $name = $_POST['name'];
+                $email = $_POST['email'];
+                $message = $_POST['message'];
+    
+                $name = htmlspecialchars($name);
+                $email = htmlspecialchars($email);
+                $message = htmlspecialchars($message);
+
+                echo '<div id="contact-form">'
+                .'<div class="container">'
+                .'<h2>お問い合わせを受け付けました</h2>'
+                .'<p id="thank-you">お問い合わせありがとうございます。
+                数日以内に、講師よりメールでご連絡させていただきます。</p>';
+
+                //お問い合わせがあったと講師に知らせるメール作成
+                $honbun = '';
+                $honbun .= 'melodypianp.main.jp経由でお問い合わせがありました。';
+                $honbun .= "\n\n";
+                $honbun .= "お名前：\n";
+                $honbun .= $name."\n\n";
+                $honbun .= "メールアドレス：\n";
+                $honbun .= $email."\n\n";
+                $honbun .= "メッセージ：\n";
+                $honbun .= $message."\n\n";
+                $honbun .= '数日以内にお客様にご返信差し上げてください。';
+
+                //動作確認用
+                //echo '<br>';
+                //echo nl2br($honbun);
+
+                //メール送信
+                $title = 'お問い合わせがありました。';
+                $header = 'From: '.$email; //送信元
+                $honbun = html_entity_decode($honbun, ENT_QUOTES, 'UTF-8');
+                mb_language('Japanese');
+                mb_internal_encoding('UTF-8');
+                mb_send_mail('yamabukiruri.chi@gmail.com', $title, $honbun, $header); //メールを送信する命令
+            }
+            
+            catch (Exception $e){
+                echo 'ただいま障害により大変ご迷惑をおかけしております。申し訳ございません。';
+                //強制終了
+                exit();
+            }
+            
+            ?>
 
         </main>
         <!--<footer>

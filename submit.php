@@ -79,6 +79,7 @@
                 //echo '<br>';
                 //echo nl2br($honbun);
                 echo 'テスト';
+                echo 'コンフリクト';
 
                 //メール送信
                 $title = 'お問い合わせがありました。';
